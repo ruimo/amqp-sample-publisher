@@ -23,11 +23,6 @@ fn main() -> Result<()> {
 
         let channel = conn.create_channel().await?;
 
-        let _ = channel
-            .queue_declare(
-                &args.queue_name, QueueDeclareOptions::default(), FieldTable::default(),
-            ).await?;
-
         let payload = User::serialize(&user).unwrap();
 
         let _ = channel
