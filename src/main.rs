@@ -1,5 +1,5 @@
 use clap::Parser;
-use lapin::{Result, Connection, ConnectionProperties, options::{QueueDeclareOptions, BasicPublishOptions}, types::FieldTable, BasicProperties};
+use lapin::{Result, Connection, ConnectionProperties, options::{BasicPublishOptions}, BasicProperties};
 use model::User;
 
 #[derive(Parser, Debug)]
